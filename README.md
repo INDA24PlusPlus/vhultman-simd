@@ -38,3 +38,28 @@ Executable built with `zig build -Doptimize=ReleaseFast -Dscalar=false -Ddisable
 Time (mean ± σ):     281.6 ms ±   1.5 ms    [User: 88.8 ms, System: 50.0 ms]
 Range (min … max):   279.4 ms … 284.1 ms    10 runs
 
+# Some statistics from VTune
+## Vectorized
+- Time when ran in VTune: 0.288s
+- IPC: 1.256
+- CPI: 0.596
+- SP GFLOPS: 21.843
+- Vectorization: 93.7% of Packed FP ops
+- Avg CPU Freq: 5.2 GHz
+
+## Scalar version (With SSE)
+- Time when ran in VTune: 1.031s
+- IPC: 1.861
+- CPI: 0.422
+- SP GFLOPS: 6.046
+- Vectorization: 11.2% of Packed FP ops
+- Avg CPU Freq: 5.3 GHz
+
+## Scalar version (no SSE)
+- Time when ran in VTune: 2.916s
+- IPC: 1.753
+- CPI: 0.452
+- SP GFLOPS: 0.010
+- x87 GFLOPS: 1.636
+- Vectorization: 0.0% of Packed FP ops
+- Avg CPU Freq: 5.3GHz
