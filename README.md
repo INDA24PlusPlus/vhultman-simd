@@ -8,7 +8,7 @@
   `zig build -Dscalar=false -Doptimize=ReleaseFast`
 
 # Results
-The manually vectorized (SIMD) version is roughly 3.63x faster than the scalar version with SSE auto vectorization and roughly 10.5x faster than the scalar version with no auto vectorization.
+The manually vectorized (SIMD) version is roughly 3.63x faster than the scalar version with SSE auto vectorization and roughly 10.5x faster than the scalar version with no SSE instructions.
 
 # Performance Comparison
 Below is a comparison of execution times when ray tracing an 8K image (7680x4320) using the [hyperfine](https://github.com/sharkdp/hyperfine CLI benchmarking tool.
